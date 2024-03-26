@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['input'])) {
-$nama = $_POST['nama'];
+if (isset($_GET['input'])) {
+$nama = $_GET['nama'];
 echo "Nama Anda: <b>$nama</b>";
 }
