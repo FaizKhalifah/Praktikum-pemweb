@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(empty($_SESSION["session"])){
+        echo"session anda telah habis";
+    }else{
+        
+?>
+
 <!DOCTYPE html> 
 <html> 
     <head>  
@@ -11,5 +19,9 @@
         echo "Ordered CD: ".$num_cd_order." pieces <br>";  
         echo "Ordered DVD: ".$num_dvd_order." pieces <br>";  
         ?>  
+        <form action="signOut.php">
+        <input type="submit" name="button" id="button" value="keluar"> 
+        </form>
     </body>  
 </html>
+<?php } ?>

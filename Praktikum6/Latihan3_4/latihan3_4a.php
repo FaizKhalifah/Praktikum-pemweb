@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(empty($_SESSION["session"])){
+        echo "session telah habis";
+    }else{
+?>
+
 <html> 
     <head> 
         <title>Order Form</title> 
@@ -13,4 +20,5 @@
         <input type="submit" value="Add To Cart" name="submit">  </form> 
     </body>  
 </html>
+<?php } ?>
        
