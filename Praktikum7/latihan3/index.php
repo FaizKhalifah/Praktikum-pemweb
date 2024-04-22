@@ -1,4 +1,6 @@
 <?php
     include("koneksiMVC.php");
-    $mysqli
+    $controller = new c_programKerja("Project Days"); 
+    $controller->invoke();
+
 ?>

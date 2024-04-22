@@ -1,5 +1,5 @@
 <?php
     function connectDatabase(){
-        $mysqli = new mysqli('localhost', 'root', '', 'praktikumWeb');
+        $mysqli = new mysqli('localhost', 'root', '', 'praktikum7pemweb');
         return $mysqli;
     }
