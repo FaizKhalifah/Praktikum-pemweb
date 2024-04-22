@@ -4,7 +4,6 @@ class pengurusBEM {
     public $nim;
     public $angkatan;
     private $jabatan;
-    private $foto;
     public function setNama($nama) {
         $this->nama = $nama;
     }
