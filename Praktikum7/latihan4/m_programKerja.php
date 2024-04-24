@@ -30,5 +30,17 @@ class m_programKerja{
         $this->hasil[] = $rows; 
         return $this->hasil; 
     }
+
+    public function tambahProgramKerja($nomorProgram, $namaProgram, $suratKeterangan){
+        $connection = connectDatabase();
+        $connection->query("INSERT INTO proker (nomorProgram, namaProgram, suratKeterangan) VALUES ('$nomorProgram', '$namaProgram', '$suratKeterangan')");
+    }
+
+    public function hapusProgramKerja($nomorProgram){
+        $connection = connectDatabase();
+        $connection->query("DELETE FROM proker WHERE nomorProgram='$nomorProgram'");
+    }
+    
+    
 }
 ?>

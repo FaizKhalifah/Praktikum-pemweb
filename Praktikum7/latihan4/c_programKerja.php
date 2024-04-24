@@ -8,6 +8,17 @@ class c_programKerja {
         $this->model = new m_programKerja($nomorProgram, $namaProgram, $suratKeterangan);
     } 
 
+    public function tambahProgramKerja($nomorProgram, $namaProgram, $suratKeterangan){
+        $this->model->tambahProgramKerja($nomorProgram, $namaProgram, $suratKeterangan);
+    }
+
+    public function hapusProgramKerja($nomorProgram){
+        $this->model->hapusProgramKerja($nomorProgram);
+        $this->invoke();
+    }
+    
+    
+
     public function invoke(){  
         $proker = $this->model->getSemuaPogramKerja(); 
         include 'v_programKerja.php'; 

@@ -1,8 +1,8 @@
 <?php
 class pengurusBEM {
-    public $nama;
-    public $nim;
-    public $angkatan;
+    private $nama;
+    private $nim;
+    private $angkatan;
     private $jabatan;
     public function setNama($nama) {
         $this->nama = $nama;
@@ -15,5 +15,21 @@ class pengurusBEM {
     }
     public function getJabatan() {
         echo $this->jabatan;
+    }
+
+    public function setnim($nim){
+        $this->nim=$nim;
+    }
+
+    public function getnim(){
+        echo $this->nim;
+    }
+
+    public function setAngkatan($angkatan){
+        $this->angkatan=$angkatan;
+    }
+
+    public function getAngkatan(){
+        echo $this->angkatan;
     }
 }
