@@ -7,7 +7,7 @@ class c_programKerja {
     public function __construct($nomorProgram = "", $namaProgram = "", $suratKeterangan = ""){ 
         $this->model = new m_programKerja($nomorProgram, $namaProgram, $suratKeterangan);
     } 
-
+    
     public function invoke(){  
         $proker = $this->model->getSemuaPogramKerja(); 
         include 'v_programKerja.php'; 
