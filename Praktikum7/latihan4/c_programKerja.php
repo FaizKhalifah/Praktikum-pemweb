@@ -16,12 +16,23 @@ class c_programKerja {
         $this->model->hapusProgramKerja($nomorProgram);
         $this->invoke();
     }
-    
-    
+
+    public function editProgramKerja($nomorProgram){
+        $program = $this->model->getProgramKerjaByNomor($nomorProgram);
+        // Load halaman edit dengan data program yang ingin diedit
+        include 'prosesEdit.php';
+    }
+
+    public function prosesEditProgramKerja($nomorProgram, $namaProgram, $suratKeterangan){
+        $this->model->editProgramKerja($nomorProgram, $namaProgram, $suratKeterangan);
+        
+    }
 
     public function invoke(){  
         $proker = $this->model->getSemuaPogramKerja(); 
         include 'v_programKerja.php'; 
     } 
+
+   
 }
 ?>

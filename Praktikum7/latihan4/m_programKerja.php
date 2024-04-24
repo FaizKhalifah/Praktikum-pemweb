@@ -40,6 +40,18 @@ class m_programKerja{
         $connection = connectDatabase();
         $connection->query("DELETE FROM proker WHERE nomorProgram='$nomorProgram'");
     }
+
+    public function getProgramKerjaByNomor($nomorProgram){
+        $connection = connectDatabase();
+        $result = $connection->query("SELECT * FROM proker WHERE nomorProgram='$nomorProgram'");
+        return $result->fetch_assoc();
+    }
+    
+    public function editProgramKerja($nomorProgram, $namaProgram, $suratKeterangan){
+        $connection = connectDatabase();
+        $connection->query("UPDATE proker SET namaProgram='$namaProgram', suratKeterangan='$suratKeterangan' WHERE nomorProgram='$nomorProgram'");
+    }
+    
     
     
 }
